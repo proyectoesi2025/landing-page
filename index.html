@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Cooperativa de Viviendas</title> 
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Cooperativa MER</div>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <img src="resources/logo.webp" alt="Logo Cooperativa" />
+    <h1>Tu hogar empieza aquí</h1>
+    <p>Una cooperativa de ayuda mutua para lograr viviendas dignas, accesibles y en comunidad.</p>
+  </section>
+
+  <section id="registerSection" class="section active">
+    <h2>Registrarse</h2>
+    <form class="contact-form" id="registerform">
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
+      <input type="text" id="cedula" name="cedula" placeholder="Cédula" required />
+      <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+      <input type="password" id="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Registrarse</button>
+    </form>
+    <p class="switch-text">¿Ya tienes una cuenta? <span id="switchToLogin" class="link">Iniciar sesión</span></p>
+  </section>
+
+  <section id="loginSection" class="section">
+    <h2>Iniciar Sesión</h2>
+    <form class="contact-form" action="login.php" method="POST">
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <input type="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    <p class="switch-text">¿No tienes una cuenta? <span id="switchToRegister" class="link">Registrarse</span></p>
+  </section>
+
+  <script src="scripts/java.js"></script>
+</body>
+</html>

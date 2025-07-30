@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel del Usuario - Cooperativa</title>
+  <link rel="stylesheet" href="usuarios.css">
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenido a tu panel personal</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="miperfil.html">Mi perfil</a>
+      <a href="fotos.html">Fotos</a>
+      <a href="#">Funcionamiento</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="registro-horas">
+      <h2>Registro de Horas Trabajadas</h2>
+      <form id="formularioHoras">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+
+        <label for="horas">Horas trabajadas:</label>
+        <input type="number" id="horas" min="1" max="12" required>
+
+        <button type="submit">Registrar</button>
+      </form>
+
+      <div class="estado" id="estadoHoras"></div>
+
+      <table id="tablaHoras">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Horas</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <button class="ingreso-btn" id="btnSolicitud" style="display:none;">Solicitar ingreso formal a la cooperativa</button>
+    </section>
+  </main>
+
+  <footer class="abajo">
+    <p>&copy; 2025 MEF - Sistema de Gestión para Cooperativas</p>
+  </footer>
+
+  <script src="usuarios.js"></script>
+</body>
+</html>
