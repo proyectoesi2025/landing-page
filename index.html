@@ -23,7 +23,7 @@
 
   <section id="registerSection" class="section active">
     <h2>Registrarse</h2>
-    <form class="contact-form" id="registerform">
+    <form class="contact-form" id="register">
       <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
       <input type="text" id="cedula" name="cedula" placeholder="Cédula" required />
       <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
@@ -35,14 +35,15 @@
 
   <section id="loginSection" class="section">
     <h2>Iniciar Sesión</h2>
-    <form class="contact-form" action="login.php" method="POST">
-      <input type="email" name="email" placeholder="Correo electrónico" required />
-      <input type="password" name="password" placeholder="Contraseña" required />
+    <form class="contact-form" id="login">
+      <input type="email" name="email" id="emaillogin" placeholder="Correo electrónico" required />
+      <input type="password" name="password" id="passwordlogin" placeholder="Contraseña" required />
       <button type="submit">Iniciar Sesión</button>
     </form>
     <p class="switch-text">¿No tienes una cuenta? <span id="switchToRegister" class="link">Registrarse</span></p>
   </section>
 
   <script src="scripts/java.js"></script>
+  <script src="scripts/users.js"></script>
 </body>
 </html>

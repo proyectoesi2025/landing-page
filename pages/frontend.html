@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Cooperativa</title> 
+  <link rel="stylesheet" href="/styles/frontend.css" /> 
+</head> 
+<body>
+  <header class="topbar">
+    <div class="brand">Mi Cooperativa</div>
+    <button id="logoutBtn" class="btn">Salir</button>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <nav>
+        <a href="#dashboard" data-view="dashboard" class="active">Dashboard</a>
+        <a href="#perfil" data-view="perfil">Perfil</a>
+        <a href="#horas" data-view="horas">Registrar Horas</a>
+        <a href="#comprobantes" data-view="comprobantes">Comprobantes</a>
+        <a href="#estado" data-view="estado">Estado de Pagos</a>
+        <a href="#datos" data-view="datos">Mis Datos Guardados</a>
+      </nav>
+    </aside>
+
+    <section id="view" class="card">
+      <div id="dashboardView" class="vista">Bienvenido al sistema</div>
+
+      <div id="perfilView" class="vista" style="display:none">
+        <div class="perfil-info">
+          <p><strong>Nombre:</strong> <span id="perfilNombre"></span></p>
+          <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
+        </div>
+        <form id="perfilForm">
+          <label>Nombre</label><input name="nombre" id="inputNombre" /><br/>
+          <label>Email</label><input name="email" type="email" id="inputEmail"/><br/>
+          <button class="btn" type="submit">Guardar</button>
+        </form>
+      </div>
+
+      <div id="horasView" class="vista" style="display:none">
+        <div class="datos-box">
+          <strong>Horas registradas:</strong> <span id="horasInfo">Pendientes</span>
+        </div>
+        <form id="horasForm">
+          <label>Semana</label><input name="semana" /><br/>
+          <label>Horas</label><input name="horas" type="number" /><br/>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div id="comprobantesView" class="vista" style="display:none">
+        <form id="compForm" enctype="multipart/form-data">
+          <input type="file" name="archivo" /><br/>
+          <button class="btn" type="submit">Subir</button>
+        </form>
+      </div>
+
+      <div id="estadoView" class="vista" style="display:none">
+        <div class="datos-box">
+          <p><strong>Saldo:</strong> <span id="saldoInfo"></span></p>
+          <p><strong>Meses de atraso:</strong> <span id="atrasoInfo"></span></p>
+        </div>
+      </div>
+
+      <div id="datosView" class="vista" style="display:none">
+        <div class="perfil-info">
+          <p><strong>Nombre:</strong> <span id="datosNombre"></span></p>
+          <p><strong>Email:</strong> <span id="datosEmail"></span></p>
+        </div>
+        <div class="datos-box">
+          <p><strong>Horas registradas:</strong> <span id="datosHoras">Pendientes</span></p>
+          <p><strong>Saldo:</strong> <span id="datosSaldo"></span></p>
+          <p><strong>Meses de atraso:</strong> <span id="datosAtraso"></span></p>
+        </div>
+        <button id="solicitarIngreso" class="btn" disabled>Solicitar Ingreso</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/scripts/frontend.js"></script> 
+</body> 
+</html>

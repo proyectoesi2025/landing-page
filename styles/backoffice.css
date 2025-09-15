@@ -1,0 +1,67 @@
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: #f0f6ff;
+  color: #1e293b;
+}
+
+.topbar {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:14px 20px;
+  background:#1e40af;
+  color:white;
+  font-size:1.5em;
+}
+
+.app {
+  max-width:1000px;
+  margin:20px auto;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.15);
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+
+th, td {
+  padding:10px;
+  border:1px solid #cbd5e1;
+  text-align:left;
+}
+
+th {
+  background:#1e40af;
+  color:white;
+}
+
+tr:nth-child(even) {
+  background:#f0f6ff;
+}
+
+.btn {
+  padding:6px 10px;
+  margin-right:5px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  color:white;
+  font-weight:bold;
+}
+
+.btn.aceptar {
+  background: #3b82f6;
+}
+
+.btn.denegar {
+  background: #ef4444;
+}

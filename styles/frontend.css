@@ -1,0 +1,140 @@
+/* General */
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f0f6ff;
+  color:#1e293b;
+}
+
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  background:#1e40af;
+  color:white;
+}
+
+.brand {
+  font-weight:bold;
+  font-size:1.5em;
+}
+
+/* Layout principal */
+.app {
+  display:flex;
+  max-width:1100px;
+  margin:20px auto;
+  gap:18px;
+}
+
+.sidebar {
+  width:220px;
+  background:white;
+  border-radius:10px;
+  padding:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.sidebar nav a {
+  display:block;
+  padding:10px;
+  border-radius:6px;
+  margin-bottom:6px;
+  text-decoration:none;
+  color:#1e40af;
+  font-weight:500;
+  transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+  background:#60a5fa;
+  color:white;
+}
+
+.sidebar nav a.active {
+  background:#3b82f6;
+  color:white;
+}
+
+/* Contenedor principal */
+.card {
+  flex:1;
+  background:white;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* Botones */
+.btn {
+  padding:10px 14px;
+  background:#3b82f6;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.2s;
+}
+
+.btn:hover {
+  background:#1e40af;
+}
+
+/* Inputs y formularios */
+input, textarea, select {
+  width:100%;
+  padding:10px;
+  margin-top:4px;
+  margin-bottom:10px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  font-size:1em;
+}
+
+/* Perfil y Mis Datos */
+.perfil-info {
+  background:#3b82f6;
+  color:white;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Horas y Estado de pagos */
+.datos-box {
+  background:#e0e7ff;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:12px;
+  box-shadow:0 1px 6px rgba(0,0,0,0.1);
+}
+
+/* Tablas */
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+
+th, td {
+  padding:10px;
+  border:1px solid #cbd5e1;
+  text-align:left;
+}
+
+th {
+  background:#1e40af;
+  color:white;
+}
+
+tr:nth-child(even) {
+  background:#f0f6ff;
+}
+
+/* Solicitar ingreso */
+#solicitarIngreso {
+  margin-top:10px;
+}
