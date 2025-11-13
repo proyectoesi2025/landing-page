@@ -27,7 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Denegar elimina de la fila y de la DB
           tr.querySelector(".denegar").addEventListener("click", () => {
-            const userId = solicitud.user_id; // campo exacto del JSON
+            const userId = solicitud.user_id; // revisa si tu API usa 'user_id' o 'id'
+            if(!userId) {
+              alert("No se encontró el ID del usuario");
+              return;
+            }
+
             fetch(`http://127.0.0.1:8000/api/users/${userId}`, {
               method: "DELETE",
               headers: {
@@ -35,16 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 'Content-Type': 'application/json'
               }
             })
-            .then(res => {
+            .then(async res => {
               if (!res.ok) throw new Error("Error al eliminar usuario");
-              return res.json();
-            })
-            .then(() => {
+              try {
+                const data = await res.json();
+                alert(data.message || `Usuario ${solicitud.Nombre} eliminado`);
+              } catch {
+                alert(`Usuario ${solicitud.Nombre} eliminado (sin mensaje del servidor)`);
+              }
               tr.remove(); // eliminar fila visualmente
-              alert(`Usuario ${solicitud.Nombre} eliminado`);
             })
             .catch(err => console.error(err));
           });
+
         });
       })
       .catch(err => console.error("Error al cargar solicitudes:", err));
