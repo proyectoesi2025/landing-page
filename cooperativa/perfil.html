@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="styles/coop.css">
+    <script defer src="scripts/coop.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+    <img src="../resources/logo.webp" class="sidebar-logo">
+    <div class="sidebar-title">Cooperativa</div>
+
+    <div class="sidebar-item" onclick="window.location.href='home.html'">🏠 Inicio</div>
+    <div class="sidebar-item active">👤 Perfil</div>
+    <div class="sidebar-item" onclick="window.location.href='horas.html'">⏱ Registrar horas</div>
+    <div class="sidebar-item" onclick="window.location.href='pagos.html'">💳 Pagos</div>
+    <div class="sidebar-item" onclick="window.location.href='foro.html'">💬 Foro</div>
+
+    <div class="sidebar-footer">
+        <p>Sesión de: <span id="userName"></span></p>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</div>
+
+<div class="main">
+    <h1>Mi Perfil</h1>
+
+    <div class="card">
+
+        <div class="input-group">
+            <label>Nombre completo</label>
+            <input type="text" id="nombre">
+        </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email">
+        </div>
+
+        <button>Guardar cambios</button>
+    </div>
+
+</div>
+</body>
+</html>

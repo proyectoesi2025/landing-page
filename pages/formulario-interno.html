@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Solicitud de ingreso</title>
+    <link rel="stylesheet" href="../styles/frontend.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="auth-card">
+        <img src="../resources/logo.webp" alt="Logo cooperativa" class="auth-logo">
+
+        <h1 class="auth-title">Solicitud de ingreso</h1>
+        <p class="auth-subtitle">
+            Completá tus datos y adjuntá el comprobante de pago para que el administrador revise tu solicitud.
+        </p>
+
+        <form id="internalForm" enctype="multipart/form-data" class="auth-form">
+
+            <div>
+                <label class="auth-label">Nombre completo</label>
+                <input type="text" id="nombre_completo" class="auth-input" required>
+            </div>
+
+            <div>
+                <label class="auth-label">Cédula</label>
+                <input type="text" id="ci" class="auth-input">
+            </div>
+
+            <div>
+                <label class="auth-label">Teléfono</label>
+                <input type="text" id="telefono" class="auth-input">
+            </div>
+
+            <div>
+                <label class="auth-label">Dirección</label>
+                <input type="text" id="direccion" class="auth-input">
+            </div>
+
+            <div>
+                <label class="auth-label">Comprobante de pago (imagen)</label>
+                <input type="file" id="comprobante" class="auth-file" accept="image/*">
+            </div>
+
+            <button type="submit" class="auth-button">Enviar solicitud</button>
+        </form>
+
+        <p id="internalMessage" class="auth-message"></p>
+    </div>
+</div>
+
+<script src="../scripts/formulario-interno.js"></script>
+</body>
+</html>

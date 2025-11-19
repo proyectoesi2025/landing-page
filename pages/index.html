@@ -1,36 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Backoffice - Solicitudes</title>
-  <link rel="stylesheet" href="/styles/backoffice.css">
+    <meta charset="UTF-8">
+    <title>Cooperativa – Inicio</title>
+    <link rel="stylesheet" href="../styles/landing.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">Backoffice Cooperativa</div>
-  </header>
 
-  <main class="app">
-    <section class="card">
-      <h2>Solicitudes de ingreso</h2>
-      <table id="solicitudesTabla">
-        <thead>
-          <tr>
-            <th>ID Usuario</th>
-            <th>CI</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Se llenará dinámicamente -->
-        </tbody>
-      </table>
+<header class="topbar">
+    <div class="logo-box">
+        <!-- si tenés logo en resources, ajustá la ruta si hace falta -->
+        <img src="resources/logo.webp" alt="Logo cooperativa" class="logo">
+        <span class="brand">Cooperativa RM</span>
+    </div>
+
+    <nav class="nav">
+        <a href="#about">Quiénes somos</a>
+        <a href="#benefits">Por qué unirse</a>
+        <a href="#services">Servicios</a>
+        <a href="#steps">Cómo funciona</a>
+        <a href="#contact">Contacto</a>
+        <button class="nav-btn" onclick="location.href='pages/login.html'">Ingresar</button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO / PORTADA -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Cooperativa de Ahorro y Solidaridad</h1>
+            <p>
+                Un espacio donde tus aportes se transforman en oportunidades reales:
+                acceso a créditos, apoyo mutuo y proyectos que mejoran la calidad de vida
+                de todos los socios.
+            </p>
+
+            <div class="hero-actions">
+                <button class="primary" onclick="location.href='pages/register.html'">
+                    Unirme a la cooperativa
+                </button>
+                <button class="secondary" onclick="location.href='pages/login.html'">
+                    Ya soy socio
+                </button>
+            </div>
+
+            <p class="hero-small">
+                Proceso en 3 pasos: creás tu cuenta, completás la solicitud y un administrador
+                revisa tu ingreso.
+            </p>
+        </div>
+
+        <div class="hero-card">
+            <h2>Resumen rápido</h2>
+            <ul>
+                <li>Aportes mensuales accesibles</li>
+                <li>Fondos transparentes y auditables</li>
+                <li>Créditos con tasa preferencial para socios</li>
+                <li>Espacio de consulta y acompañamiento</li>
+            </ul>
+        </div>
     </section>
-  </main>
 
-  <script src="/scripts/backoffice.js"></script>
+    <!-- QUIÉNES SOMOS -->
+    <section id="about" class="section about">
+        <div class="section-title">
+            <h2>¿Quiénes somos?</h2>
+            <p>
+                Somos una cooperativa formada por trabajadores y estudiantes que
+                buscan una forma más justa y solidaria de administrar el dinero.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <div class="card">
+                <h3>Misión</h3>
+                <p>
+                    Brindar herramientas financieras accesibles y transparentes que
+                    permitan a los socios organizar sus aportes, obtener créditos y
+                    sostener proyectos personales y comunitarios.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Visión</h3>
+                <p>
+                    Ser una cooperativa de referencia por su cercanía, confianza y
+                    transparencia, demostrando que la gestión colectiva es una
+                    alternativa real al modelo individualista.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Valores</h3>
+                <p>
+                    Solidaridad, responsabilidad, respeto, transparencia y participación
+                    activa de cada socio en las decisiones importantes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ UNIRSE -->
+    <section id="benefits" class="section benefits">
+        <div class="section-title">
+            <h2>¿Por qué unirse a la cooperativa?</h2>
+            <p>Estos son algunos de los beneficios concretos para los socios.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit">
+                <h3>Ahorro organizado</h3>
+                <p>
+                    Aportes mensuales claros, con registro digital y acceso al histórico
+                    de pagos desde el portal interno.
+                </p>
+            </div>
+            <div class="benefit">
+                <h3>Créditos a tasa preferencial</h3>
+                <p>
+                    Posibilidad de acceder a préstamos más accesibles que en el sistema
+                    financiero tradicional, priorizando necesidades reales.
+                </p>
+            </div>
+            <div class="benefit">
+                <h3>Transparencia total</h3>
+                <p>
+                    Cada movimiento queda registrado y puede ser consultado por los socios
+                    autorizados, favoreciendo la confianza.
+                </p>
+            </div>
+            <div class="benefit">
+                <h3>Comunidad y apoyo</h3>
+                <p>
+                    Espacios de consulta, foros internos y acompañamiento de los
+                    administradores para resolver dudas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="services" class="section services">
+        <div class="section-title">
+            <h2>Servicios principales</h2>
+            <p>Todo lo que podés gestionar desde el portal de la cooperativa.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Aportes mensuales</h3>
+                <p>
+                    Registro y seguimiento de los aportes de cada socio, con
+                    comprobantes digitalizados.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>Control de asistencia</h3>
+                <p>
+                    Presencia en actividades obligatorias o reuniones clave, para
+                    mantener la participación activa.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>Solicitud de créditos</h3>
+                <p>
+                    Gestión ordenada de solicitudes de préstamo, con estados y
+                    seguimiento desde el backoffice.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>Foro de consultas</h3>
+                <p>
+                    Espacio interno donde los socios realizan consultas y solo los
+                    administradores pueden responder oficialmente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section testimonials">
+        <div class="section-title">
+            <h2>Lo que dicen los socios</h2>
+            <p>Algunas opiniones sobre el funcionamiento de la cooperativa.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimony">
+                <p>
+                    “Gracias a la cooperativa pude financiar mis estudios sin caer en
+                    créditos impagables. El seguimiento es claro y humano.”
+                </p>
+                <span>— Ana, 22 años</span>
+            </article>
+            <article class="testimony">
+                <p>
+                    “Lo que más valoro es la transparencia: puedo ver mis aportes,
+                    estados de solicitud y respuestas del equipo en todo momento.”
+                </p>
+                <span>— Jorge, 31 años</span>
+            </article>
+            <article class="testimony">
+                <p>
+                    “No es solo un sistema de pagos, es una comunidad donde las
+                    decisiones se toman en conjunto y se escucha a cada socio.”
+                </p>
+                <span>— Lucía, 27 años</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- PASOS -->
+    <section id="steps" class="section steps">
+        <div class="section-title">
+            <h2>¿Cómo funciona el proceso?</h2>
+            <p>Ingresar a la cooperativa es sencillo y transparente.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3>Creás tu cuenta</h3>
+                <p>Completás tus datos básicos y generás un usuario y contraseña.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3>Completás la solicitud</h3>
+                <p>
+                    Desde el portal interno cargás información más detallada y el
+                    comprobante de pago inicial.
+                </p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3>Revisión del administrador</h3>
+                <p>
+                    Un administrador evalúa la solicitud y puede aprobarla o pedir
+                    información adicional.
+                </p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3>Acceso al portal completo</h3>
+                <p>
+                    Si la solicitud es aprobada, accedés a todas las secciones:
+                    aportes, créditos, foros y más.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contact" class="section cta-final">
+        <div class="cta-box">
+            <h2>¿Listo para dar el siguiente paso?</h2>
+            <p>
+                Podés comenzar el proceso ahora mismo creando tu cuenta en la
+                plataforma. Si ya sos socio, simplemente iniciá sesión.
+            </p>
+
+            <div class="cta-actions">
+                <button class="primary" onclick="location.href='register.html'">
+                    Crear cuenta
+                </button>
+                <button class="secondary" onclick="location.href='login.html'">
+                    Iniciar sesión
+                </button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2025 Cooperativa RM. Todos los derechos reservados.</p>
+</footer>
+
+<script src="scripts/landing.js"></script>
 </body>
 </html>

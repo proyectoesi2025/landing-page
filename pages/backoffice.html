@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Backoffice - Cooperativa</title>
+    <link rel="stylesheet" href="../styles/backoffice.css">
+</head>
+<body>
+
+<div class="bo-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="bo-sidebar">
+        <div class="bo-logo-block">
+            <img src="../resources/logo.webp" alt="Logo" class="bo-logo">
+            <span class="bo-logo-text">Cooperativa</span>
+        </div>
+
+        <nav class="bo-nav">
+            <button class="bo-nav-item active" data-section="solicitudes">
+                <span class="bo-nav-icon">📩</span>
+                <span>Solicitudes</span>
+            </button>
+            <button class="bo-nav-item" data-section="usuarios">
+                <span class="bo-nav-icon">👥</span>
+                <span>Usuarios</span>
+            </button>
+        </nav>
+
+        <div class="bo-sidebar-footer">
+            <span id="boAdminName"></span>
+            <button id="boLogout" class="bo-logout-btn">Cerrar sesión</button>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="bo-main">
+
+        <!-- HEADER -->
+        <header class="bo-header">
+            <div>
+                <h1 class="bo-page-title">Panel de administración</h1>
+                <p class="bo-page-subtitle">Gestioná las solicitudes de ingreso a la cooperativa.</p>
+            </div>
+
+            <div class="bo-header-stats">
+                <div class="bo-counter-card">
+                    <span class="bo-counter-label">Pendientes</span>
+                    <span id="countPending" class="bo-counter-value">0</span>
+                </div>
+                <div class="bo-counter-card">
+                    <span class="bo-counter-label">Aprobadas</span>
+                    <span id="countApproved" class="bo-counter-value">0</span>
+                </div>
+                <div class="bo-counter-card">
+                    <span class="bo-counter-label">Rechazadas</span>
+                    <span id="countDenied" class="bo-counter-value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO: SOLICITUDES -->
+        <section id="section-solicitudes" class="bo-section active">
+            <div class="bo-table-card">
+                <div class="bo-table-header">
+                    <h2>Solicitudes pendientes</h2>
+                </div>
+
+                <div class="bo-table-wrapper">
+                    <table class="bo-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>CI</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pendingTable">
+                            <!-- filas dinámicas -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENIDO: USUARIOS -->
+        <section id="section-usuarios" class="bo-section">
+            <div class="bo-table-card">
+                <div class="bo-table-header">
+                    <h2>Usuarios registrados</h2>
+                </div>
+
+                <div class="bo-table-wrapper">
+                    <table class="bo-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Admin</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTable">
+                            <!-- filas dinámicas -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- PANEL DETALLE -->
+<div id="detailOverlay" class="bo-detail-overlay">
+    <div class="bo-detail-panel">
+        <button id="closeDetail" class="bo-detail-close">✕</button>
+        <h2>Detalle de solicitud</h2>
+        <div class="bo-detail-body">
+            <p><strong>Nombre:</strong> <span id="detailNombre"></span></p>
+            <p><strong>Cédula:</strong> <span id="detailCI"></span></p>
+            <p><strong>Teléfono:</strong> <span id="detailTelefono"></span></p>
+            <p><strong>Dirección:</strong> <span id="detailDireccion"></span></p>
+            <p><strong>Email:</strong> <span id="detailEmail"></span></p>
+            <p><strong>Estado:</strong> <span id="detailEstado"></span></p>
+
+            <div class="bo-detail-image-block">
+                <span class="bo-detail-image-label">Comprobante de pago</span>
+                <div id="detailImageContainer" class="bo-detail-image-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/backoffice.js"></script>
+</body>
+</html>
